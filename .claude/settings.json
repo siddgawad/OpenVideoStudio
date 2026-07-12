@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "includeGitInstructions": true,
+  "fileCheckpointingEnabled": true,
+  "autoCompactEnabled": true,
+  "env": {
+    "ENABLE_TOOL_SEARCH": "true",
+    "MAX_MCP_OUTPUT_TOKENS": "25000"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(python scripts/check-bootstrap.py *)",
+      "Bash(python scripts/validate-research-data.py *)"
+    ],
+    "ask": [
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "mcp__github__create_*",
+      "mcp__github__update_*",
+      "mcp__github__delete_*",
+      "mcp__supabase-development-readonly__*",
+      "mcp__cloudflare-api__*",
+      "mcp__sentry__*"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)",
+      "Read(./config/credentials.json)",
+      "Bash(rm -rf *)",
+      "Bash(git push --force *)",
+      "Bash(git reset --hard *)",
+      "Bash(npm publish *)"
+    ],
+    "defaultMode": "default"
+  }
+}

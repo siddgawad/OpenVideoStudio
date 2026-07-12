@@ -1,0 +1,9 @@
+.env
+.env.*
+!.env.example
+.claude/settings.local.json
+.artifacts/
+.playwright/
+node_modules/
+__pycache__/
+*.pyc

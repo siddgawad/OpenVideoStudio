@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ResearchSourceRecord",
+  "type": "object",
+  "required": [
+    "id",
+    "url",
+    "title",
+    "organization",
+    "source_type",
+    "retrieved_at",
+    "confidence",
+    "verification_status"
+  ],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "url": { "type": "string", "format": "uri" },
+    "title": { "type": "string", "minLength": 1 },
+    "organization": { "type": "string", "minLength": 1 },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "official_docs",
+        "official_repository",
+        "license",
+        "model_card",
+        "paper",
+        "pricing",
+        "policy",
+        "release_notes",
+        "issue",
+        "independent_evaluation",
+        "other"
+      ]
+    },
+    "published_at": { "type": ["string", "null"] },
+    "retrieved_at": { "type": "string", "format": "date-time" },
+    "evidence": { "type": "string" },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "verification_status": {
+      "type": "string",
+      "enum": ["verified", "partially_verified", "unverified", "conflicting"]
+    },
+    "time_sensitive": { "type": "boolean", "default": false },
+    "notes": { "type": "string" },
+    "affected_conclusions": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}
