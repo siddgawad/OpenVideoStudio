@@ -17,12 +17,15 @@ edge-tts 7.2.8, Pillow 12.3.0, Python 3.14. The /watch skill
 (bradautomates/claude-video, cloned at `C:\Users\theof\claude-video`) is
 installed at `~/.claude/skills/watch` for reference-video analysis.
 
-**Blocked on owner:**
-- `gh auth login` — needed to push the branch, create the issues in
-  docs/tasks/ISSUES.md, and open the PR.
-- Reference video links (YouTube/Instagram) for the style-analysis
-  workstream (ROADMAP, I-009).
+**GitHub state:** branch pushed; issues #1–#10 created and assigned to
+@siddgawad (via stored git credentials — the `gh` CLI itself is still
+unauthenticated); PR #11 open: Milestone 0 (closes #1–#4).
 
-**Next session:** push + PR from `feat/mvp-pipeline`; create issues I-001…I-010;
-then Milestone 1 starting with I-005 (research + source traceability) and
-I-008 (word-aligned captions via edge-tts WordBoundary events).
+**Blocked on owner:**
+- Review + merge PR #11.
+- Reference video links (YouTube/Instagram) for the style-analysis
+  workstream (ROADMAP, issue #9).
+
+**Next session:** Milestone 1 starting with #5 (research + source
+traceability) and #8 (word-aligned captions via edge-tts WordBoundary
+events).

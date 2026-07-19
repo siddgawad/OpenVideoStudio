@@ -1,14 +1,8 @@
 # Issue Queue
 
-`gh` was unauthenticated during the 2026-07-19 session, so issues are drafted
-here verbatim. Once `gh auth login` is done, create each with:
-
-```bash
-gh issue create --repo siddgawad/OpenVideoStudio --title "<title>" --body-file <(sed -n '/^## I-00N/,/^---$/p' docs/tasks/ISSUES.md) --assignee @me
-```
-
-(or copy the body manually). I-001…I-004 are the retroactive record of the
-Milestone-0 PR; I-005+ are open Milestone-1 work.
+These drafts were created as GitHub issues #1–#10 on 2026-07-19 (assigned to
+@siddgawad); I-001…I-004 map to #1–#4 and are closed by the Milestone-0 PR
+(#11). This file remains as the durable, in-repo record.
 
 ---
 
